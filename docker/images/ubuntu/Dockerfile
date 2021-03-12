@@ -19,6 +19,7 @@ RUN apt-get update -y && \
     bash /opt/install_node.sh && \
     apt-get install -y nodejs && \
     npm install -g newman@${NEWMAN_VERSION} && \
+    npm install newman-reporter-html && \
     rm /opt/install_node.sh && \
     apt-get purge -y gnupg;
 
