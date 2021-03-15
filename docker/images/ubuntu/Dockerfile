@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 LABEL maintainer="Postman Labs <help@postman.com>"
 
-ARG NODE_VERSION=10
+ARG NODE_VERSION=14
 ARG NEWMAN_VERSION
 
 # Bail out early if NODE_VERSION is not provided
@@ -42,4 +42,4 @@ WORKDIR /etc/newman
 # docker run -v /home/collections:/etc/newman -t postman/newman_ubuntu run YourCollection.json.postman_collection \
 #                                                                          -e YourEnvironment.postman_environment \
 #                                                                          -H newman_report.html
-ENTRYPOINT ["newman"]
+#ENTRYPOINT ["newman"]
